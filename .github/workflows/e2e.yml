@@ -10,10 +10,10 @@ jobs:
     steps:
       - name: Wait for Vercel preview deployment to be ready
         id: deployment
-        uses: dorshinar/get-deployment-url@v1.0.6
+        uses: dorshinar/get-deployment-url@v1.0.7
         timeout-minutes: 5
         with:
-          token: ${{ secrets.DEPLOYMENT_ACCESS_TOKEN }}
+          token: ZjgZJoKQ2L2nd8QK2qOnJfzl
 
   test_e2e:
     name: Test end-to-end
