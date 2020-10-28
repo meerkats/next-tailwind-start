@@ -21,6 +21,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next",
+    "deploy": "vc -b CYPRESS_INSTALL_BINARY=0",
+    "deploy:prod": "npm run deploy -- --prod",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "npm run cy:run"
