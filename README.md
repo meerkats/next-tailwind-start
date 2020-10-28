@@ -16,17 +16,24 @@
 
 ### Environment variables
 
-Production, Preview, and Development environment variables can be set up for this project by viewing Project Settings on https://vercel.com/«your_account»/next-tailwind-start/settings/environment-variables. Change `/next-tailwind-start/` if you have renamed your pro
+Production, Preview, and Development environment variables can be set up for this project by viewing Project Settings on https://vercel.com/«your_account»/next-tailwind-start/settings/environment-variables. *
 
 ### Writing tests
 
 End-to-end specs for Cypress are found in `/cypress/integration`. Tests can be run in the following ways:
 
-1. With a UI: `npm run cy:open`
-2. Headless: `npm test` or `npm run cy:run`
-3. Automatically for pull requests: *coming soon*
+* With a UI: `npm run cy:open`
+* Headless: `npm test` or `npm run cy:run`
+* Automatically for pull requests:
+   1. Generate a new Token in https://vercel.com/account/tokens
+   2. Create a new Secret called `DEPLOYMENT_ACCESS_TOKEN` in https://github.com/«your_account»/next-tailwind-start/settings/secrets *
+
 
 ## Deployment
 
 1. Staging deployments: `npm run deploy`
 2. Production deployments: `npm run deploy:prod`
+
+---
+
+*\* Change `/next-tailwind-start/` if you have renamed your project*
