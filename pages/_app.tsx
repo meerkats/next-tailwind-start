@@ -2,12 +2,20 @@
 import type { AppProps /*, AppContext */ } from 'next/app'
 import '../styles/tailwind.css'
 
+import Head from 'next/head'
+
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       <a href="#main" className="sr-only">
         Skip to main
       </a>
