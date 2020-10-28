@@ -14,6 +14,41 @@
 2. Open http://localhost:3000
 3. Add new routes as pages in `/pages` (e.g. `/pages/about.tsx` -> `http://localhost:3000/about`)
 
+### Custom fonts
+
+1. Load web fonts either with a `link` tag (see `_app.tsx` for an example) or by placing the font files into the `/public` folder and create a CSS file to use them.
+2. Add the new font families to the theme in `tailwind.config.js`
+   ```
+   theme: {
+      ...
+      fontFamily: {
+        display: 'Roboto, sans-serif',
+        body: 'Inter, sans-serif',
+      },
+      ...
+   }
+   ```
+3. Add the `font-body` utility class to body tag. The above definition creates a `font-display` utility class.
+
+### Colour palette
+
+1. Define your colour palette in `tailwind.config.js`
+   ```
+      theme: {
+         ...
+         colors: {
+            black: '#181818',
+            white: '#fff',
+            transparent: 'rgba(0, 0, 0, 0)',
+            'wtp-green': '#2ec3a1',
+            'wtp-red': '#ff2900',
+            ...
+         },
+         ...
+      },
+   ```
+2. These colours will be available in utility classes such as `text-black`, `bg-wtp-green`, etc
+
 ### Environment variables
 
 Production, Preview, and Development environment variables can be set up for this project by viewing Project Settings on https://vercel.com/«your_account»/next-tailwind-start/settings/environment-variables. **
