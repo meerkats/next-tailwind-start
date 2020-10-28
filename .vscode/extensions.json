@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "andrew-codes.cypress-snippets",
+    "bradlc.vscode-tailwindcss",
+    "coenraads.bracket-pair-colorizer",
+    "esbenp.prettier-vscode",
+    "heybourn.headwind",
+    "mrmlnc.vscode-duplicate",
+    "oderwat.indent-rainbow",
+    "visualstudioexptteam.vscodeintellicode"
+  ]
+}
