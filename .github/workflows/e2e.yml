@@ -13,7 +13,7 @@ jobs:
         uses: dorshinar/get-deployment-url@v1.0.6
         timeout-minutes: 5
         with:
-          token: ZjgZJoKQ2L2nd8QK2qOnJfzl
+          token: ${{ secrets.DEPLOYMENT_ACCESS_TOKEN }}
 
   test_e2e:
     name: Test end-to-end
