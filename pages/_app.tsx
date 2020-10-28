@@ -2,8 +2,22 @@
 import type { AppProps /*, AppContext */ } from 'next/app'
 import '../styles/tailwind.css'
 
+import Footer from '../components/Footer'
+import Header from '../components/Header'
+
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <a href="#main" className="sr-only">
+        Skip to main
+      </a>
+      <Header />
+      <main id="main" role="main">
+        <Component {...pageProps} />
+      </main>
+      <Footer />
+    </>
+  )
 }
 
 // Only uncomment this method if you have blocking data requirements for
