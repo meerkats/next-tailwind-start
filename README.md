@@ -6,7 +6,7 @@
 2. Install dependencies (`npm install`)
 3. Install `vercel` globally (`npm i -g vercel@latest`)
 4. Log in to Vercel (`vc login`)
-5. Link this project to Vercel with an initial deployment confirming all defaults (`vc -c`)
+5. Link this project to Vercel with an initial deployment confirming all defaults (`vc -c`) **
 
 ## Development
 
@@ -36,4 +36,6 @@ End-to-end specs for Cypress are found in `/cypress/integration`. Tests can be r
 
 ---
 
-*\* Change `/next-tailwind-start/` if you have renamed your project*
+\* Change `/next-tailwind-start/` if you have renamed your project
+
+\*\* If you are linked to multiple Vercel accounts then run `vc` WITHOUT the `-c` flag and select the correct team when prompted.
