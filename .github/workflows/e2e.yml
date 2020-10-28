@@ -1,0 +1,56 @@
+name: Test deployment preview
+on: [pull_request]
+
+jobs:
+  test_setup:
+    name: Test setup
+    runs-on: ubuntu-latest
+    outputs:
+      preview_url: ${{ steps.deployment.outputs.deployment }}
+    steps:
+      - name: Wait for Vercel preview deployment to be ready
+        id: deployment
+        uses: dorshinar/get-deployment-url@v1.0.6
+        timeout-minutes: 5
+        with:
+          token: ${{ secrets.DEPLOYMENT_ACCESS_TOKEN }}
+
+  test_e2e:
+    name: Test end-to-end
+    needs: test_setup
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      # - run: npx cypress cache path
+      # - run: npx cypress cache list
+
+      - name: Cache Cypress
+        id: cache-cypress
+        uses: actions/cache@v1
+        with:
+          path: ~/.cache/Cypress
+          key: cypress-cache-v2-${{ runner.os }}-${{ hashFiles('**/package.json') }}
+
+      - name: Install Cypress
+        run: npx cypress install
+
+      # - run: npx cypress cache list
+
+      - name: Run Cypress
+        run: npx cypress run --config baseUrl=${{ needs.test_setup.outputs.preview_url }}
+
+      - name: Upload Cypress videos
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
+
+      - name: Upload Cypress screenshots (only on failure)
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
