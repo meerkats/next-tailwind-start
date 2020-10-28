@@ -1,0 +1,28 @@
+{
+  "name": "next-tailwind-start",
+  "version": "1.0.0",
+  "description": "Next.js + Tailwind Starter",
+  "main": "index.js",
+  "dependencies": {
+    "next": "^10.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
+    "@types/node": "^14.14.5",
+    "@types/react": "^16.9.54",
+    "autoprefixer": "^10.0.1",
+    "cypress": "^5.5.0",
+    "tailwindcss": "^1.9.6",
+    "typescript": "^4.0.5"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "John Lombardo <john.lombardo@wundermanthompson.com>",
+  "license": "ISC"
+}
