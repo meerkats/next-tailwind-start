@@ -21,7 +21,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test": "npm run cy:run"
   },
   "author": "John Lombardo <john.lombardo@wundermanthompson.com>",
   "license": "ISC"
