@@ -2,7 +2,7 @@
 
 ## Installation
 
-1. Clone this repository (`git clone «TBD»`)
+1. Clone this repository (`git clone git@github.com:meerkats/next-tailwind-start.git`)
 2. Install dependencies (`npm install`)
 3. Install `vercel` globally (`npm i -g vercel@latest`)
 4. Log in to Vercel (`vc login`)
@@ -13,6 +13,8 @@
 1. Run the development server (`vc dev`)
 2. Open http://localhost:3000
 3. Add new routes as pages in `/pages` (e.g. `/pages/about.tsx` -> `http://localhost:3000/about`)
+
+## Common tasks
 
 ### Custom fonts
 
