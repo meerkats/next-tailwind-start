@@ -40,6 +40,7 @@
             black: '#181818',
             white: '#fff',
             transparent: 'rgba(0, 0, 0, 0)',
+            current: 'currentColor',
             'wtp-green': '#2ec3a1',
             'wtp-red': '#ff2900',
             ...
